@@ -12,5 +12,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    if !params[:name].nil?
+      session[:name].delete
+    end   
   end
 end
